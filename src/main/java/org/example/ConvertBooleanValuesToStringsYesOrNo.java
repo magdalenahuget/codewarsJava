@@ -8,10 +8,11 @@ public class ConvertBooleanValuesToStringsYesOrNo {
     }
 
     public static String boolToWorld(boolean b){
-        if(b == true) {
-            return "Yes";
-        } else {
-            return "No";
-        }
+//        if(b == true) {
+//            return "Yes";
+//        } else {
+//            return "No";
+//        }
+        return b == true ? "Yes" : "No";
     }
 }
