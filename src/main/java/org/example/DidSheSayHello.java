@@ -20,7 +20,10 @@ public class DidSheSayHello {
             System.out.println(greetings);
             if (greetings.toLowerCase().contains(hello)) {
                 return true;
+            } else {
+                System.out.println("this 'hello' is not in 'greetings'");
             }
+
         }
         return false;
     }
