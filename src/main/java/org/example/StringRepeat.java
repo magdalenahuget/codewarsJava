@@ -9,6 +9,12 @@ public class StringRepeat {
         return sb.toString();
     }
 
+    public static String repeatStr2(final int repeat, final String string) {
+        StringBuilder sb = new StringBuilder();
+        sb.append(String.valueOf(string).repeat(Math.max(0, repeat)));
+        return sb.toString();
+    }
+
     public static void main(String[] args) {
         String result = repeatStr(5,"ha");
         System.out.println(result);
