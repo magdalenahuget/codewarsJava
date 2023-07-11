@@ -15,7 +15,6 @@ public class DNAtoRNA {
                 changed.append(letter);
             }
         }
-        String transformed = changed.toString();
-        return transformed;
+        return changed.toString();
     }
 }
