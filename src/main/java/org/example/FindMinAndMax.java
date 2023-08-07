@@ -24,4 +24,5 @@ public class FindMinAndMax {
         return result;
     }
 
+
 }
