@@ -1,0 +1,29 @@
+package org.example;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
+public class DescendingOrder {
+    public static void main(String[] args) {
+        System.out.println("Hello and welcome!");
+        System.out.println();
+        int result = sortDesc(42145);
+        System.out.println("Output: " + result);
+    }
+
+
+    public static int sortDesc(final int num) {
+        String numAsString = String.valueOf(num);
+        String[] elements = numAsString.split("");
+
+        List<String> numbers = new ArrayList<>();
+        Collections.addAll(numbers, elements);
+
+        Collections.sort(numbers, Collections.reverseOrder());
+
+        String result = String.join("", numbers);
+        return Integer.parseInt(result);
+    }
+}
