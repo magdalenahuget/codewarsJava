@@ -1,5 +1,8 @@
 package org.example.java;
 
+import java.util.Arrays;
+import java.util.Collections;
+
 public class MyHeadIsAtTheWrongEnd {
     public static void main(String[] args) {
         // Wywołaj fixTheMeerkat i przypisz wynik do zmiennej
@@ -13,7 +16,7 @@ public class MyHeadIsAtTheWrongEnd {
         System.out.println("Poprawiona tablica: " + (fixedArray));
     }
 
-
+    // VERSION 1
     public static String[] fixTheMeerkat(String[] arr) {
         String[] result = new String[arr.length];
         int x = 0;
@@ -22,5 +25,17 @@ public class MyHeadIsAtTheWrongEnd {
             x++;
         }
         return result;
+    }
+
+    // VERSION 2
+    public static String[] fixTheMeerkat2(String[] arr) {
+        return new String[] {arr[2], arr[1], arr[0]};
+    }
+
+    // VERSION 3
+    public static String[] fixTheMeerkat3(String[] arr) {
+        String[] copy = arr.clone();
+        Collections.reverse(Arrays.asList(copy));
+        return copy;
     }
 }
